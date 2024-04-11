@@ -10,7 +10,7 @@ namespace Task16_2
             string jsonString = String.Empty;
             using (StreamReader sr = new StreamReader("../../../../Products.json"))
             {
-                jsonString = sr.ReadLine();
+                jsonString = sr.ReadToEnd();
             }
             Product[] products = JsonSerializer.Deserialize<Product[]>(jsonString);
 
